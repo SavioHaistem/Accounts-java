@@ -3,12 +3,13 @@ import entities.SavingsAccount;
 
 public class Main {
     public static void main(String[] args) {
-        Account acc1 = new Account(1001,"Alex",1000.0);
-        acc1.withdraw(200);
-        System.out.println(acc1.getBalance());
+        Account x = new Account(1020,"Alex",1000.0);
+        Account y = new SavingsAccount(1023,"Maria",1000.0,0.1);
 
-        Account acc2 = new SavingsAccount(1001,"Julia",1000.0,2.0);
-        acc2.withdraw(200);
-        System.out.println(acc2.getBalance());
+        x.withdraw(50.0);
+        y.withdraw(50.0);
+
+        System.out.println(x.getBalance());
+        System.out.println(y.getBalance());
     }
 }
